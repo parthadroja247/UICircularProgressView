@@ -1,6 +1,6 @@
 import UIKit
 
-class UICircularProgressView: UIView {
+open class UICircularProgressView: UIView {
     
     var backgroundCircleColor: UIColor = .black {
         didSet {
@@ -32,7 +32,7 @@ class UICircularProgressView: UIView {
         configureView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configureView()
     }
