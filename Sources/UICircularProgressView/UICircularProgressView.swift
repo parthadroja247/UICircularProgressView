@@ -2,23 +2,23 @@ import UIKit
 
 open class UICircularProgressView: UIView {
     
-    var backgroundCircleColor: UIColor = .black {
+    open var backgroundCircleColor: UIColor = .black {
         didSet {
             backgroundCircle.strokeColor = backgroundCircleColor.cgColor
         }
     }
-    var fillColor: UIColor = .white {
+    open var fillColor: UIColor = .white {
         didSet {
             progressCircle.strokeColor = fillColor.cgColor
         }
     }
-    var lineWidth: CGFloat = 4 {
+    open var lineWidth: CGFloat = 4 {
         didSet {
             backgroundCircle.lineWidth = lineWidth
             progressCircle.lineWidth = lineWidth
         }
     }
-    var defaultProgress: CGFloat = 0 {
+    open var defaultProgress: CGFloat = 0 {
         didSet {
             updateProgress(progress: defaultProgress)
         }
@@ -82,7 +82,7 @@ open class UICircularProgressView: UIView {
         self.layer.addSublayer(progressCircle)
     }
     
-    func updateProgress(progress: CGFloat) {
+    open func updateProgress(progress: CGFloat) {
         progressCircle.strokeEnd = CGFloat(progress / 100)
     }
 }
